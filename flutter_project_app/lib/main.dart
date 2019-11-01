@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'routes/week_page.dart';
+import 'common/API.dart';
 
 void main() => runApp(MyApp());
 
@@ -6,6 +8,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+    API.init();
+//    API(context)
+//        .login('11');
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -20,7 +26,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: WeekRoute(),
     );
   }
 }
